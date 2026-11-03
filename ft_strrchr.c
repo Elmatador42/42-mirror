@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/02 12:10:32 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/02 12:10:32 by arngomes         ###   ########.fr       */
+/*   Created: 2026/11/03 15:56:07 by arngomes          #+#    #+#             */
+/*   Updated: 2026/11/03 16:20:17 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*last;
+	const char	*res;
 
-	last = NULL;
+	res = NULL;
 	while (*s)
 	{
-		if (*s == (char)c)
-			last = s;
-		s++;
+		if (*s == c)
+			res = s;
+		*s++;
 	}
 	if ((char)c == '\0')
 		return ((char *)s);
-	return ((char *)last);
+	return ((char *)res);
 }

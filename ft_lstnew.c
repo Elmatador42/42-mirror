@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/02 13:16:36 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/02 13:16:36 by arngomes         ###   ########.fr       */
+/*   Created: 2026/11/03 16:38:30 by arngomes          #+#    #+#             */
+/*   Updated: 2026/11/03 17:17:28 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*node;
+	t_list	node;
 
 	node = malloc(sizeof(t_list));
 	if (!node)

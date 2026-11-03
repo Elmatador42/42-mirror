@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/02 12:32:01 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/02 12:32:01 by arngomes         ###   ########.fr       */
+/*   Created: 2026/11/03 17:07:12 by arngomes          #+#    #+#             */
+/*   Updated: 2026/11/03 17:17:01 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,25 +32,25 @@ static size_t	num_len(long n)
 
 char	*ft_itoa(int n)
 {
-	char	*str;
+	char	*res;
 	long	nb;
-	size_t	len;
+	size_t	l;
 
 	nb = n;
-	len = num_len(nb);
-	str = malloc(len + 1);
-	if (!str)
+	l = num_len(nb);
+	res = malloc((l + 1) * sizeof(char));
+	if (!res)
 		return (NULL);
-	str[len] = '\0';
+	res[l] = '\0';
 	if (nb < 0)
 	{
-		str[0] = '-';
+		res[0] = '-';
 		nb = -nb;
 	}
-	while (len > 0 && str[len - 1] != '-')
+	while (l > 0 && res[l - 1] != '-')
 	{
-		str[--len] = (nb % 10) + '0';
+		res[--l] = nb % 10 + '0';
 		nb /= 10;
 	}
-	return (str);
+	return (res);
 }

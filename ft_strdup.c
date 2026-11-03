@@ -5,22 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/02 12:32:01 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/02 12:32:01 by arngomes         ###   ########.fr       */
+/*   Created: 2026/11/03 15:11:11 by arngomes          #+#    #+#             */
+/*   Updated: 2026/11/03 15:23:05 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_strdup(const char *s)
 {
-	char	*dup;
-	size_t	len;
+	size_t	i;
+	char	*res;
 
-	len = ft_strlen(s) + 1;
-	dup = malloc(len);
-	if (!dup)
+	res = malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!res)
 		return (NULL);
-	ft_memcpy(dup, s, len);
-	return (dup);
+	i = 0;
+	while (s[i])
+	{
+		res[i] = s[i];
+		i++;
+	}
+	res[i] = '\0';
+	return (res);
 }

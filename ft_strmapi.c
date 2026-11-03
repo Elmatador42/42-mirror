@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/02 12:32:01 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/02 12:32:01 by arngomes         ###   ########.fr       */
+/*   Created: 2026/11/03 17:02:03 by arngomes          #+#    #+#             */
+/*   Updated: 2026/11/03 17:16:52 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*str;
 	unsigned int	i;
+	char			*res;
 
 	if (!s || !f)
 		return (NULL);
-	str = malloc(ft_strlen(s) + 1);
-	if (!str)
+	res = malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!res)
 		return (NULL);
 	i = 0;
 	while (s[i])
 	{
-		str[i] = f(i, s[i]);
+		res[i] = f(i, s[i]);
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	res[i] = '\0';
+	return (res);
 }

@@ -5,14 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/02 11:16:50 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/02 12:10:32 by arngomes         ###   ########.fr       */
+/*   Created: 2026/11/03 12:24:47 by arngomes          #+#    #+#             */
+/*   Updated: 2026/11/03 14:36:57 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 int	ft_isalnum(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	return ((c <= '9' && c >= '0') || (c <= 'Z' && c >= 'A') || (c <= 'z'
+			&& c >= 'a'));
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/02 12:10:32 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/02 12:10:32 by arngomes         ###   ########.fr       */
+/*   Created: 2026/11/03 15:40:49 by arngomes          #+#    #+#             */
+/*   Updated: 2026/11/03 15:54:07 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (i < len && big[i])
 	{
 		j = 0;
-		while (little[j] && i + j < len && big[i + j] == little[j])
+		while (i + j < len && big[i + j] && big[i + j] == little[j])
+		{
 			j++;
-		if (!little[j])
-			return ((char *)(big + i));
+			if (!little[j])
+				return ((char *)&big[i]);
+		}
 		i++;
 	}
 	return (NULL);

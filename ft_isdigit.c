@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/02 11:15:32 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/02 12:10:32 by arngomes         ###   ########.fr       */
+/*   Created: 2026/11/03 12:29:47 by arngomes          #+#    #+#             */
+/*   Updated: 2026/11/03 14:37:08 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 int	ft_isdigit(int c)
 {
-	return (c >= '0' && c <= '9');
+	return (c <= '9' && c >= '0');
 }

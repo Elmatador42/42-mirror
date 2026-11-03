@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/02 12:32:01 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/02 12:32:01 by arngomes         ###   ########.fr       */
+/*   Created: 2026/11/03 16:49:21 by arngomes          #+#    #+#             */
+/*   Updated: 2026/11/03 17:16:34 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,5 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		return ;
 	i = 0;
 	while (s[i])
-	{
-		f(i, &s[i]);
-		i++;
-	}
+		f(i, &s[i++]);
 }

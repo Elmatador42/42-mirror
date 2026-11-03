@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/02 11:16:25 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/02 12:10:32 by arngomes         ###   ########.fr       */
+/*   Created: 2026/11/03 12:15:53 by arngomes          #+#    #+#             */
+/*   Updated: 2026/11/03 15:24:20 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-int	ft_tolower(int c)
+char	ft_tolower(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
+	if (c <= 'Z' && c >= 'A')
+		return (c - 'A' + 'a');
 	return (c);
 }

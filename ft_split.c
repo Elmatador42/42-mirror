@@ -5,60 +5,84 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/02 12:32:01 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/02 12:32:01 by arngomes         ###   ########.fr       */
+/*   Created: 2026/11/03 13:04:48 by arngomes          #+#    #+#             */
+/*   Updated: 2026/11/03 15:07:31 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-static size_t	count_words(char const *s, char c)
+static size_t	count_word(char const *s, char c)
 {
-	size_t	count;
+	size_t	i;
+	size_t	res;
 
-	count = 0;
-	while (*s)
+	i = 0;
+	res = 0;
+	while (s[i])
 	{
-		if (*s != c && (s[1] == c || s[1] == '\0'))
-			count++;
-		s++;
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i])
+			res++;
+		while (s[i] && s[i] != c)
+			i++;
 	}
-	return (count);
+	return (res);
 }
 
-static void	*free_all(char **arr, size_t n)
+static void	*free_all(char **res, size_t n)
 {
 	while (n > 0)
-		free(arr[--n]);
-	free(arr);
+		free(res[--n]);
+	free(res);
 	return (NULL);
+}
+
+static char	*dup_word(char const *s, size_t k)
+{
+	char	*word;
+	size_t	i;
+
+	word = malloc((k + 1) * sizeof(char));
+	if (!word)
+		return (NULL);
+	i = 0;
+	while (i < k)
+	{
+		word[i] = s[i];
+		i++;
+	}
+	word[i] = '\0';
+	return (word);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**arr;
-	size_t	i;
-	size_t	len;
+	char	**res;
+	size_t	k;
+	size_t	l;
 
 	if (!s)
 		return (NULL);
-	arr = malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!arr)
+	res = malloc((count_word(s, c) + 1) * sizeof(char *));
+	if (!res)
 		return (NULL);
-	i = 0;
+	l = 0;
 	while (*s)
 	{
-		if (*s == c && s++)
-			continue ;
-		len = 0;
-		while (s[len] && s[len] != c)
-			len++;
-		arr[i] = ft_substr(s, 0, len);
-		if (!arr[i])
-			return (free_all(arr, i));
-		i++;
-		s += len;
+		while (*s && *s == c)
+			s++;
+		if (!*s)
+			break ;
+		k = 0;
+		while (s[k] && s[k] != c)
+			k++;
+		res[l] = dup_word(s, k);
+		if (!res[l++])
+			return (free_all(res, l - 1));
+		s += k;
 	}
-	arr[i] = NULL;
-	return (arr);
+	res[l] = NULL;
+	return (res);
 }
