@@ -6,7 +6,7 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 17:18:17 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/04 17:30:50 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 17:57:53 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	const unsigned char *s;
-	unsigned char *d;
+	const unsigned char	*s;
+	unsigned char		*d;
 
 	if (!dest && !src)
 		return (NULL);

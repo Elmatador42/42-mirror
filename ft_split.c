@@ -6,7 +6,7 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 13:04:48 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/03 15:07:31 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:01:11 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	res = malloc((count_word(s, c) + 1) * sizeof(char *));
+	res = ft_calloc(count_word(s, c) + 1, sizeof(char *));
 	if (!res)
 		return (NULL);
 	l = 0;
@@ -83,6 +83,5 @@ char	**ft_split(char const *s, char c)
 			return (free_all(res, l - 1));
 		s += k;
 	}
-	res[l] = NULL;
 	return (res);
 }

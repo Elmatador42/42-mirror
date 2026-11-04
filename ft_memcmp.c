@@ -6,7 +6,7 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 16:40:45 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/04 16:44:51 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 17:58:08 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (c1[i] != c2[i])
-			return (c1[i] - c2[i])
-		i++;
+			return ((c1[i] - c2[i]) i++);
 	}
 	return (0);
 }

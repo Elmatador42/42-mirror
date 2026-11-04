@@ -6,7 +6,7 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 16:19:50 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/04 16:31:23 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 17:58:02 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*p;
-	size_t i;
+	size_t				i;
 
 	p = (const unsigned char *)s;
 	i = 0;
