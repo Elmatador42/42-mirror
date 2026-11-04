@@ -6,7 +6,7 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 17:41:55 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/04 17:56:20 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:08:30 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (!node)
 		{
 			del(content);
-			ft_lstclear(&new_list, del);
+			ft_lstclear(&new, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&new, node);

@@ -6,15 +6,15 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 12:20:30 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/03 15:24:26 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:11:56 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 'a' + 'A');
-	return (c);
+	return ((char)c);
 }

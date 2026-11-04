@@ -6,11 +6,11 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 16:19:50 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/04 17:58:02 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:06:37 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

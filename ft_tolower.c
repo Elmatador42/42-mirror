@@ -6,15 +6,15 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 12:15:53 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/03 15:24:20 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:11:47 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	ft_tolower(int c)
 {
 	if (c <= 'Z' && c >= 'A')
 		return (c - 'A' + 'a');
-	return (c);
+	return ((char)c);
 }

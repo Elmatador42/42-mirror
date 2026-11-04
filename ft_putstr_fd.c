@@ -6,11 +6,11 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 16:10:38 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/03 16:12:09 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:06:56 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

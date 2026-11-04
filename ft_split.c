@@ -6,11 +6,11 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 13:04:48 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/04 18:01:11 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:07:03 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 static size_t	count_word(char const *s, char c)
 {

@@ -6,11 +6,11 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 15:11:11 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/03 15:23:05 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:07:11 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

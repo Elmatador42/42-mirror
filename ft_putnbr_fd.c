@@ -6,7 +6,7 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 15:27:59 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/03 15:38:08 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:10:14 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long	nd;
+	long	nb;
 
 	nb = n;
 	if (n < 0)

@@ -6,13 +6,13 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 12:28:11 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/03 15:23:23 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:12:34 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_isascii(int c)
 {
-	return ((c <= 0 && c >= 127));
+	return ((c >= 0 && c <= 127));
 }

@@ -6,11 +6,11 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 16:43:12 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/03 16:44:16 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:06:52 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

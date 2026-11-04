@@ -6,13 +6,13 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 16:21:16 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/03 17:48:54 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:16:52 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	unsigned int	i;
 

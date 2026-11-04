@@ -6,7 +6,7 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 15:56:07 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/03 16:20:17 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:14:52 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strrchr(const char *s, int c)
 	res = NULL;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			res = s;
-		*s++;
+		s++;
 	}
 	if ((char)c == '\0')
 		return ((char *)s);

@@ -6,7 +6,7 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 16:49:21 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/03 17:16:34 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:10:51 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		return ;
 	i = 0;
 	while (s[i])
-		f(i, &s[i++]);
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
