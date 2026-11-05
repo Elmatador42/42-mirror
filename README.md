@@ -34,4 +34,3 @@ cc -Wall -Wextra -Werror main.c -L. -lft -o program
 - `man 3` pages of the reimplemented functions
 - [GNU C Library manual](https://www.gnu.org/software/libc/manual/)
 - [GNU Make manual](https://www.gnu.org/software/make/manual/)
-- Kernighan & Ritchie, *The C Programming Language*
